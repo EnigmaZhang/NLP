@@ -6,18 +6,14 @@ https://github.com/tensorflow/tensor2tensor
 https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/example_usr_dir/my_submodule.py
 """
 
-import os
 import logging
+import os
 from abc import ABC
 
-from tensor2tensor.data_generators import generator_utils
 from tensor2tensor.data_generators import problem
 from tensor2tensor.data_generators import text_encoder
 from tensor2tensor.data_generators import text_problems
-from tensor2tensor.data_generators import translate
 from tensor2tensor.utils import registry
-
-import tensorflow as tf
 
 SRC_TRAIN_DATA = 'train.txt.up.clean'  # 训练集上联数据文件
 TGT_TRAIN_DATA = 'train.txt.down.clean'  # 训练集下联数据文件
