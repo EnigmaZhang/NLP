@@ -20,7 +20,7 @@ TGT_TRAIN_DATA = 'train.txt.down.clean'  # 训练集下联数据文件
 SRC_DEV_DATA = 'dev.txt.up.clean'  # 测试集上联数据文件
 TGT_DEV_DATA = 'dev.txt.down.clean'  # 测试集下联数据文件
 MERGE_VOCAB = 'merge.txt.vocab.clean'  # 最终字表文件
-VOCAB_SIZE = 9122 # 字表文件中字的个数
+VOCAB_SIZE = 3604 # 字表文件中字的个数
 LOCATION_OF_DATA = os.path.abspath(os.path.dirname(__file__)) + '/'
 
 _TRAIN_DATASETS = [
