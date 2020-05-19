@@ -1,1 +1,1 @@
-from . import transformer
+from . import merge_vocab
