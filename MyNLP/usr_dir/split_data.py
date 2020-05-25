@@ -1,3 +1,11 @@
+"""
+Wirter: Zhang Xiaotian
+Description: This module is to process data into each line with a Chinese character.
+Reference:
+https://github.com/tensorflow/tensor2tensor
+https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/example_usr_dir/my_submodule.py
+"""
+
 import sys
 
 filename = sys.argv[1]

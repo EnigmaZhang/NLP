@@ -15,6 +15,9 @@ from tensor2tensor.data_generators import text_encoder
 from tensor2tensor.data_generators import text_problems
 from tensor2tensor.utils import registry
 
+import tensor2tensor.bin.t2t_trainer
+
+
 SRC_TRAIN_DATA = 'train.txt.up.clean'  # 训练集上联数据文件
 TGT_TRAIN_DATA = 'train.txt.down.clean'  # 训练集下联数据文件
 SRC_DEV_DATA = 'dev.txt.up.clean'  # 测试集上联数据文件

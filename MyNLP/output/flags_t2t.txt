@@ -5,7 +5,7 @@
 --model=transformer
 --hparams_set=transformer_small
 --hparams_range=None
---hparams=batch_size=512
+--hparams=batch_size=256
 --problem=translate_up2down
 --data_dir=./data_dir
 --train_steps=2000
