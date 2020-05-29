@@ -15,7 +15,7 @@ with open(filename, 'r', encoding='utf-8') as infile:
         for line in lines:
             out = ""
             for i in line.strip():
-                out += i + ' '
+                out += i + ''
             out = out[:-1]
             out += '\n'
             outfile.write(out)

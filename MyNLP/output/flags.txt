@@ -16,14 +16,14 @@
 --test_random_seed=301
 --test_randomize_ordering_seed=
 --test_srcdir=
---test_tmpdir=C:\Users\zhang\AppData\Local\Temp\absl_testing
+--test_tmpdir=/tmp/absl_testing
 --xml_output_file=
 --gin_location_prefix=
 --autotune_max_trials=10
 --autotune_maximize
 --autotune_parallel_trials=1
 --nocloud_mlengine
---cloud_tpu_name=None-tpu
+--cloud_tpu_name=enigma-tpu
 --eval_steps=100
 --export_saved_model_api_version=1
 --nogenerate_data
