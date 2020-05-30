@@ -5,7 +5,7 @@
 --model=transformer
 --hparams_set=transformer_small
 --hparams_range=None
---hparams=batch_size=256
+--hparams=batch_size=1
 --problem=translate_up2down
 --data_dir=./data_dir
 --train_steps=2000
@@ -26,7 +26,7 @@
 --eval_throttle_seconds=600
 --sync=False
 --worker_job=/job:localhost
---worker_gpu=0
+--worker_gpu=1
 --worker_replicas=1
 --worker_id=0
 --worker_gpu_memory_fraction=0.95

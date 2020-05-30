@@ -15,9 +15,9 @@ t2t-trainer \
 --hparams_set=${HPARAMS_SET} \
 --output_dir=${TRAIN_DIR} \
 --keep_checkpoint_max=1000 \
---worker_gpu=0 \
+--worker_gpu=1 \
 --train_steps=2000 \
 --save_checkpoints_secs=1800 \
 --schedule=train \
 --worker_gpu_memory_fraction=0.95 \
---hparams="batch_size=256" 2>&1 | tee -a ${LOG_DIR}/train_default.log
+--hparams="batch_size=1" 2>&1 | tee -a ${LOG_DIR}/train_default.log

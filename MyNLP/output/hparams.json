@@ -9,7 +9,7 @@
 "attention_value_channels": 0,
 "attention_variables_3d": false,
 "batch_shuffle_size": 512,
-"batch_size": 256,
+"batch_size": 1,
 "bottom": {},
 "causal_decoder_self_attention": true,
 "clip_grad_norm": 0.0,
