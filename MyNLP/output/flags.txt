@@ -16,14 +16,14 @@
 --test_random_seed=301
 --test_randomize_ordering_seed=
 --test_srcdir=
---test_tmpdir=C:\Users\zhang\AppData\Local\Temp\absl_testing
+--test_tmpdir=/tmp/absl_testing
 --xml_output_file=
 --gin_location_prefix=
 --autotune_max_trials=10
 --autotune_maximize
 --autotune_parallel_trials=1
 --nocloud_mlengine
---cloud_tpu_name=None-tpu
+--cloud_tpu_name=zhangxiaotiannew-tpu
 --eval_steps=100
 --export_saved_model_api_version=1
 --nogenerate_data
@@ -75,7 +75,7 @@
 --noeval_use_test_set
 --noexport_saved_model
 --gpu_order=
---hparams=batch_size=1
+--hparams=batch_size=256
 --hparams_set=transformer_small
 --keep_checkpoint_every_n_hours=10000
 --keep_checkpoint_max=1000
@@ -90,8 +90,8 @@
 --save_checkpoints_secs=1800
 --nosync
 --notfdbg
---train_steps=2000
---worker_gpu=0
+--train_steps=20000
+--worker_gpu=1
 --worker_gpu_memory_fraction=0.95
 --worker_id=0
 --worker_job=/job:localhost
