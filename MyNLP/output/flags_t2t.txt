@@ -26,7 +26,7 @@
 --eval_throttle_seconds=600
 --sync=False
 --worker_job=/job:localhost
---worker_gpu=1
+--worker_gpu=0
 --worker_replicas=1
 --worker_id=0
 --worker_gpu_memory_fraction=0.95

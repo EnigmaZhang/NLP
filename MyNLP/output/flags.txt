@@ -91,7 +91,7 @@
 --nosync
 --notfdbg
 --train_steps=2000
---worker_gpu=1
+--worker_gpu=0
 --worker_gpu_memory_fraction=0.95
 --worker_id=0
 --worker_job=/job:localhost
