@@ -7,7 +7,6 @@ https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/
 """
 
 import os
-from abc import ABC
 
 from tensor2tensor.data_generators import problem
 from tensor2tensor.data_generators import text_encoder
@@ -41,7 +40,7 @@ EOS = text_encoder.EOS_ID
 
 
 @registry.register_problem
-class TranslateUp2down(text_problems.Text2TextProblem, ABC):
+class TranslateUp2down(text_problems.Text2TextProblem):
 
     @property
     def approx_vocab_size(self):
@@ -98,7 +97,7 @@ class TranslateUp2down(text_problems.Text2TextProblem, ABC):
         vocab_list = []
         with open(self.vocab_name, 'r', encoding='utf-8') as f:
             vocab_list = f.read().splitlines()
-        logging.info("Done")
+        tf.logging.info("Done")
         vocab_token = text_encoder.TokenTextEncoder(vocab_filename=None, vocab_list=vocab_list, replace_oov="<UNK>",
                                                     num_reserved_ids=text_encoder.NUM_RESERVED_TOKENS)
         return {"inputs": vocab_token, "targets": vocab_token}
