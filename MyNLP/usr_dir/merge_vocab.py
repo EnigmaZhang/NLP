@@ -6,7 +6,6 @@ https://github.com/tensorflow/tensor2tensor
 https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/example_usr_dir/my_submodule.py
 """
 
-import logging
 import os
 from abc import ABC
 
@@ -95,8 +94,7 @@ class TranslateUp2down(text_problems.Text2TextProblem, ABC):
                                                         vocab, vocab)
 
     def feature_encoders(self, data_dir):
-        logging.getLogger("tensorflow").setLevel(logging.NOTSET)
-        logging.info("Loading and processing vocabulary from: %s" % _VOCAB_FILES[0])
+        tf.logging.info("Loading and processing vocabulary from: %s" % _VOCAB_FILES[0])
         vocab_list = []
         with open(self.vocab_name, 'r', encoding='utf-8') as f:
             vocab_list = f.read().splitlines()
