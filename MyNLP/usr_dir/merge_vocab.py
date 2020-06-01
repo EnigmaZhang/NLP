@@ -7,6 +7,7 @@ https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/
 """
 
 import os
+from abc import ABC
 
 from tensor2tensor.data_generators import problem
 from tensor2tensor.data_generators import text_encoder
@@ -19,7 +20,7 @@ TGT_TRAIN_DATA = 'train.txt.down.clean'  # 训练集下联数据文件
 SRC_DEV_DATA = 'dev.txt.up.clean'  # 测试集上联数据文件
 TGT_DEV_DATA = 'dev.txt.down.clean'  # 测试集下联数据文件
 MERGE_VOCAB = 'merge.txt.vocab.clean'  # 最终字表文件
-VOCAB_SIZE = 3484 # 字表文件中字的个数
+VOCAB_SIZE = 438436 # 字表文件中字的个数
 LOCATION_OF_DATA = os.path.abspath(os.path.dirname(__file__)) + '/'
 
 _TRAIN_DATASETS = [
@@ -40,7 +41,7 @@ EOS = text_encoder.EOS_ID
 
 
 @registry.register_problem
-class TranslateUp2down(text_problems.Text2TextProblem):
+class TranslateUp2down(text_problems.Text2TextProblem, ABC):
 
     @property
     def approx_vocab_size(self):
