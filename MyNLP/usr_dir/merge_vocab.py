@@ -13,6 +13,7 @@ from tensor2tensor.data_generators import problem
 from tensor2tensor.data_generators import text_encoder
 from tensor2tensor.data_generators import text_problems
 from tensor2tensor.utils import registry
+import tensorflow as tf
 
 
 SRC_TRAIN_DATA = 'train.txt.up.clean'  # 训练集上联数据文件
@@ -20,7 +21,7 @@ TGT_TRAIN_DATA = 'train.txt.down.clean'  # 训练集下联数据文件
 SRC_DEV_DATA = 'dev.txt.up.clean'  # 测试集上联数据文件
 TGT_DEV_DATA = 'dev.txt.down.clean'  # 测试集下联数据文件
 MERGE_VOCAB = 'merge.txt.vocab.clean'  # 最终字表文件
-VOCAB_SIZE = 438436 # 字表文件中字的个数
+VOCAB_SIZE = 7568 # 字表文件中字的个数
 LOCATION_OF_DATA = os.path.abspath(os.path.dirname(__file__)) + '/'
 
 _TRAIN_DATASETS = [

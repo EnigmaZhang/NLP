@@ -14,9 +14,9 @@ t2t-trainer \
 --model=${MODEL} \
 --hparams_set=${HPARAMS_SET} \
 --output_dir=${TRAIN_DIR} \
---keep_checkpoint_max=1000 \
---worker_gpu=1 \
---train_steps=20000 \
+--keep_checkpoint_max=2 \
+--worker_gpu=0 \
+--train_steps=10000 \
 --save_checkpoints_secs=1800 \
 --schedule=train \
 --worker_gpu_memory_fraction=0.95 \
