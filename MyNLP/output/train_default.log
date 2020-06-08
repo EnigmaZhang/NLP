@@ -1,0 +1,842 @@
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+INFO:tensorflow:Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+I0608 08:20:58.473067 140240451675968 usr_dir.py:43] Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+INFO:tensorflow:Loading hparams from existing json ./output/hparams.json
+I0608 08:20:58.474081 140240451675968 hparams_lib.py:64] Loading hparams from existing json ./output/hparams.json
+INFO:tensorflow:Overwrite key batch_size: 4096 -> 32
+I0608 08:20:58.475076 140240451675968 hparams_lib.py:86] Overwrite key batch_size: 4096 -> 32
+INFO:tensorflow:Overriding hparams in transformer_small with batch_size=32
+I0608 08:20:58.475281 140240451675968 hparams_lib.py:55] Overriding hparams in transformer_small with batch_size=32
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+W0608 08:20:58.476564 140240451675968 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+INFO:tensorflow:Configuring DataParallelism to replicate the model.
+I0608 08:20:58.476774 140240451675968 trainer_lib.py:271] Configuring DataParallelism to replicate the model.
+INFO:tensorflow:schedule=train
+I0608 08:20:58.476871 140240451675968 devices.py:76] schedule=train
+INFO:tensorflow:worker_gpu=1
+I0608 08:20:58.476945 140240451675968 devices.py:77] worker_gpu=1
+INFO:tensorflow:sync=False
+I0608 08:20:58.477012 140240451675968 devices.py:78] sync=False
+WARNING:tensorflow:Schedule=train. Assuming that training is running on a single machine.
+W0608 08:20:58.477321 140240451675968 devices.py:141] Schedule=train. Assuming that training is running on a single machine.
+INFO:tensorflow:datashard_devices: ['gpu:0']
+I0608 08:20:58.477536 140240451675968 devices.py:170] datashard_devices: ['gpu:0']
+INFO:tensorflow:caching_devices: None
+I0608 08:20:58.477674 140240451675968 devices.py:171] caching_devices: None
+INFO:tensorflow:ps_devices: ['gpu:0']
+I0608 08:20:58.477814 140240451675968 devices.py:172] ps_devices: ['gpu:0']
+WARNING:tensorflow:From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0608 08:20:58.478046 140240451675968 module_wrapper.py:139] From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+I0608 08:20:58.478146 140240451675968 merge_vocab.py:98] Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+INFO:tensorflow:Done
+I0608 08:20:58.479118 140240451675968 merge_vocab.py:102] Done
+INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f8bdd954290>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f8bdd954850>}
+I0608 08:20:58.482737 140240451675968 estimator.py:212] Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f8bdd954290>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f8bdd954850>}
+WARNING:tensorflow:Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f8bdd9aca70>) includes params argument, but params are not passed to Estimator.
+W0608 08:20:58.482959 140240451675968 model_fn.py:630] Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f8bdd9aca70>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Skipping training since max_steps has already saved.
+I0608 08:20:58.488113 140240451675968 estimator.py:363] Skipping training since max_steps has already saved.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:32: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:32: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:32: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:32: The name tf.logging.INFO is deprecated. Please use tf.compat.v1.logging.INFO instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:33: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/bin/t2t-trainer:33: The name tf.app.run is deprecated. Please use tf.compat.v1.app.run instead.
+
+INFO:tensorflow:Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+I0608 08:24:55.797800 140038971324224 usr_dir.py:43] Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+INFO:tensorflow:Loading hparams from existing json ./output/hparams.json
+I0608 08:24:55.798786 140038971324224 hparams_lib.py:64] Loading hparams from existing json ./output/hparams.json
+INFO:tensorflow:Overwrite key batch_size: 4096 -> 32
+I0608 08:24:55.799760 140038971324224 hparams_lib.py:86] Overwrite key batch_size: 4096 -> 32
+INFO:tensorflow:Overriding hparams in transformer_small with batch_size=32
+I0608 08:24:55.799983 140038971324224 hparams_lib.py:55] Overriding hparams in transformer_small with batch_size=32
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:242: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+W0608 08:24:55.801328 140038971324224 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:242: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+INFO:tensorflow:Configuring DataParallelism to replicate the model.
+I0608 08:24:55.801574 140038971324224 trainer_lib.py:265] Configuring DataParallelism to replicate the model.
+INFO:tensorflow:schedule=train
+I0608 08:24:55.801673 140038971324224 devices.py:76] schedule=train
+INFO:tensorflow:worker_gpu=1
+I0608 08:24:55.801750 140038971324224 devices.py:77] worker_gpu=1
+INFO:tensorflow:sync=False
+I0608 08:24:55.801821 140038971324224 devices.py:78] sync=False
+WARNING:tensorflow:Schedule=train. Assuming that training is running on a single machine.
+W0608 08:24:55.801903 140038971324224 devices.py:141] Schedule=train. Assuming that training is running on a single machine.
+INFO:tensorflow:datashard_devices: ['gpu:0']
+I0608 08:24:55.802103 140038971324224 devices.py:170] datashard_devices: ['gpu:0']
+INFO:tensorflow:caching_devices: None
+I0608 08:24:55.802180 140038971324224 devices.py:171] caching_devices: None
+INFO:tensorflow:ps_devices: ['gpu:0']
+I0608 08:24:55.802419 140038971324224 devices.py:172] ps_devices: ['gpu:0']
+WARNING:tensorflow:From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0608 08:24:55.802630 140038971324224 module_wrapper.py:139] From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+I0608 08:24:55.802722 140038971324224 merge_vocab.py:98] Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+INFO:tensorflow:Done
+I0608 08:24:55.803775 140038971324224 merge_vocab.py:102] Done
+INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f5cee8be990>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f5cee8d0850>}
+I0608 08:24:55.807295 140038971324224 estimator.py:212] Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f5cee8be990>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f5cee8d0850>}
+WARNING:tensorflow:Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f5cee8b6cb0>) includes params argument, but params are not passed to Estimator.
+W0608 08:24:55.807488 140038971324224 model_fn.py:630] Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f5cee8b6cb0>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Skipping training since max_steps has already saved.
+I0608 08:24:55.812545 140038971324224 estimator.py:363] Skipping training since max_steps has already saved.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+INFO:tensorflow:Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+I0608 08:25:56.224803 140305036769088 usr_dir.py:43] Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+INFO:tensorflow:Loading hparams from existing json ./output/hparams.json
+I0608 08:25:56.225793 140305036769088 hparams_lib.py:64] Loading hparams from existing json ./output/hparams.json
+INFO:tensorflow:Overwrite key batch_size: 4096 -> 32
+I0608 08:25:56.226867 140305036769088 hparams_lib.py:86] Overwrite key batch_size: 4096 -> 32
+INFO:tensorflow:Overriding hparams in transformer_small with batch_size=32
+I0608 08:25:56.227112 140305036769088 hparams_lib.py:55] Overriding hparams in transformer_small with batch_size=32
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+W0608 08:25:56.228517 140305036769088 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+INFO:tensorflow:Configuring DataParallelism to replicate the model.
+I0608 08:25:56.228772 140305036769088 trainer_lib.py:271] Configuring DataParallelism to replicate the model.
+INFO:tensorflow:schedule=train
+I0608 08:25:56.228886 140305036769088 devices.py:76] schedule=train
+INFO:tensorflow:worker_gpu=1
+I0608 08:25:56.228979 140305036769088 devices.py:77] worker_gpu=1
+INFO:tensorflow:sync=False
+I0608 08:25:56.229066 140305036769088 devices.py:78] sync=False
+WARNING:tensorflow:Schedule=train. Assuming that training is running on a single machine.
+W0608 08:25:56.229165 140305036769088 devices.py:141] Schedule=train. Assuming that training is running on a single machine.
+INFO:tensorflow:datashard_devices: ['gpu:0']
+I0608 08:25:56.229374 140305036769088 devices.py:170] datashard_devices: ['gpu:0']
+INFO:tensorflow:caching_devices: None
+I0608 08:25:56.229529 140305036769088 devices.py:171] caching_devices: None
+INFO:tensorflow:ps_devices: ['gpu:0']
+I0608 08:25:56.229688 140305036769088 devices.py:172] ps_devices: ['gpu:0']
+WARNING:tensorflow:From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0608 08:25:56.229918 140305036769088 module_wrapper.py:139] From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+I0608 08:25:56.230016 140305036769088 merge_vocab.py:98] Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+INFO:tensorflow:Done
+I0608 08:25:56.230981 140305036769088 merge_vocab.py:102] Done
+INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9ae7274ed0>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f9ae7274490>}
+I0608 08:25:56.234577 140305036769088 estimator.py:212] Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f9ae7274ed0>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7f9ae7274490>}
+WARNING:tensorflow:Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f9ae725fa70>) includes params argument, but params are not passed to Estimator.
+W0608 08:25:56.234797 140305036769088 model_fn.py:630] Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7f9ae725fa70>) includes params argument, but params are not passed to Estimator.
+INFO:tensorflow:Skipping training since max_steps has already saved.
+I0608 08:25:56.240190 140305036769088 estimator.py:363] Skipping training since max_steps has already saved.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_gan/python/estimator/tpu_gan_estimator.py:42: The name tf.estimator.tpu.TPUEstimator is deprecated. Please use tf.compat.v1.estimator.tpu.TPUEstimator instead.
+
+INFO:tensorflow:Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+I0608 08:28:22.111268 140662724548416 usr_dir.py:43] Importing user module usr_dir from path /home/zhangxiaotiannew/NLP/MyNLP
+INFO:tensorflow:Loading hparams from existing json ./output/hparams.json
+I0608 08:28:22.112327 140662724548416 hparams_lib.py:64] Loading hparams from existing json ./output/hparams.json
+INFO:tensorflow:Overwrite key batch_size: 4096 -> 32
+I0608 08:28:22.113318 140662724548416 hparams_lib.py:86] Overwrite key batch_size: 4096 -> 32
+INFO:tensorflow:Overriding hparams in transformer_small with batch_size=128
+I0608 08:28:22.113552 140662724548416 hparams_lib.py:55] Overriding hparams in transformer_small with batch_size=128
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+W0608 08:28:22.114854 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/trainer_lib.py:248: RunConfig.__init__ (from tensorflow.contrib.learn.python.learn.estimators.run_config) is deprecated and will be removed in a future version.
+Instructions for updating:
+When switching to tf.estimator.Estimator, use tf.estimator.RunConfig instead.
+INFO:tensorflow:Configuring DataParallelism to replicate the model.
+I0608 08:28:22.115093 140662724548416 trainer_lib.py:271] Configuring DataParallelism to replicate the model.
+INFO:tensorflow:schedule=train
+I0608 08:28:22.115202 140662724548416 devices.py:76] schedule=train
+INFO:tensorflow:worker_gpu=1
+I0608 08:28:22.115287 140662724548416 devices.py:77] worker_gpu=1
+INFO:tensorflow:sync=False
+I0608 08:28:22.115372 140662724548416 devices.py:78] sync=False
+WARNING:tensorflow:Schedule=train. Assuming that training is running on a single machine.
+W0608 08:28:22.115460 140662724548416 devices.py:141] Schedule=train. Assuming that training is running on a single machine.
+INFO:tensorflow:datashard_devices: ['gpu:0']
+I0608 08:28:22.115655 140662724548416 devices.py:170] datashard_devices: ['gpu:0']
+INFO:tensorflow:caching_devices: None
+I0608 08:28:22.115845 140662724548416 devices.py:171] caching_devices: None
+INFO:tensorflow:ps_devices: ['gpu:0']
+I0608 08:28:22.116017 140662724548416 devices.py:172] ps_devices: ['gpu:0']
+WARNING:tensorflow:From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+W0608 08:28:22.116252 140662724548416 module_wrapper.py:139] From /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge_vocab.py:98: The name tf.logging.info is deprecated. Please use tf.compat.v1.logging.info instead.
+
+INFO:tensorflow:Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+I0608 08:28:22.116350 140662724548416 merge_vocab.py:98] Loading and processing vocabulary from: /home/zhangxiaotiannew/NLP/MyNLP/usr_dir/merge.txt.vocab.clean
+INFO:tensorflow:Done
+I0608 08:28:22.117290 140662724548416 merge_vocab.py:102] Done
+INFO:tensorflow:Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fee2f01a650>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7fee2f01a410>}
+I0608 08:28:22.120812 140662724548416 estimator.py:212] Using config: {'_task_type': None, '_task_id': 0, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fee2f01a650>, '_master': '', '_num_ps_replicas': 0, '_num_worker_replicas': 0, '_environment': 'local', '_is_chief': True, '_evaluation_master': '', '_train_distribute': None, '_eval_distribute': None, '_experimental_max_worker_delay_secs': None, '_device_fn': None, '_tf_config': gpu_options {
+  per_process_gpu_memory_fraction: 1.0
+}
+, '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_secs': 1800, '_log_step_count_steps': 100, '_protocol': None, '_session_config': gpu_options {
+  per_process_gpu_memory_fraction: 0.95
+}
+allow_soft_placement: true
+graph_options {
+  optimizer_options {
+    global_jit_level: OFF
+  }
+}
+isolate_session_state: true
+, '_save_checkpoints_steps': None, '_keep_checkpoint_max': 2, '_keep_checkpoint_every_n_hours': 10000, '_model_dir': './output', '_session_creation_timeout_secs': 7200, 'use_tpu': False, 't2t_device_info': {'num_async_replicas': 1}, 'data_parallelism': <tensor2tensor.utils.expert_utils.Parallelism object at 0x7fee2f01a410>}
+WARNING:tensorflow:Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7fee2f005b00>) includes params argument, but params are not passed to Estimator.
+W0608 08:28:22.121029 140662724548416 model_fn.py:630] Estimator's model_fn (<function T2TModel.make_estimator_model_fn.<locals>.wrapping_model_fn at 0x7fee2f005b00>) includes params argument, but params are not passed to Estimator.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W0608 08:28:22.130985 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+INFO:tensorflow:Reading data files from ./data_dir/translate_up2down-train*
+I0608 08:28:22.138036 140662724548416 problem.py:651] Reading data files from ./data_dir/translate_up2down-train*
+INFO:tensorflow:partition: 0 num_data_files: 9
+I0608 08:28:22.139203 140662724548416 problem.py:677] partition: 0 num_data_files: 9
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/data_generators/problem.py:687: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+W0608 08:28:22.140938 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/data_generators/problem.py:687: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:276: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and: 
+`tf.data.TFRecordDataset(path)`
+W0608 08:28:23.345512 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:276: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and: 
+`tf.data.TFRecordDataset(path)`
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:38: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0608 08:28:23.713574 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:38: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/data/experimental/ops/grouping.py:194: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+W0608 08:28:23.959929 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/data/experimental/ops/grouping.py:194: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:234: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+W0608 08:28:24.569488 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/utils/data_reader.py:234: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.cast` instead.
+INFO:tensorflow:Calling model_fn.
+I0608 08:28:24.828814 140662724548416 estimator.py:1148] Calling model_fn.
+INFO:tensorflow:Setting T2TModel mode to 'train'
+I0608 08:28:24.839404 140662724548416 t2t_model.py:2267] Setting T2TModel mode to 'train'
+INFO:tensorflow:Using variable initializer: uniform_unit_scaling
+I0608 08:28:25.655678 140662724548416 api.py:332] Using variable initializer: uniform_unit_scaling
+WARNING:tensorflow:Entity <function framework at 0x7fee3528a200> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: LIVE_VARS_IN
+W0608 08:28:26.288690 140662724548416 ag_logging.py:146] Entity <function framework at 0x7fee3528a200> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: LIVE_VARS_IN
+INFO:tensorflow:Transforming feature 'inputs' with symbol_modality_10069_256.bottom
+I0608 08:28:34.305944 140662724548416 api.py:332] Transforming feature 'inputs' with symbol_modality_10069_256.bottom
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+W0608 08:28:34.783393 140662724548416 deprecation.py:506] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+INFO:tensorflow:Transforming feature 'targets' with symbol_modality_10069_256.targets_bottom
+I0608 08:28:36.646069 140662724548416 api.py:332] Transforming feature 'targets' with symbol_modality_10069_256.targets_bottom
+INFO:tensorflow:Building model body
+I0608 08:28:36.755034 140662724548416 api.py:332] Building model body
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/models/transformer.py:95: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+W0608 08:28:39.148489 140662724548416 deprecation.py:506] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensor2tensor/models/transformer.py:95: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+WARNING:tensorflow:Entity <function attention_bias_to_padding at 0x7fee33b3c7a0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: 
+W0608 08:28:39.962059 140662724548416 ag_logging.py:146] Entity <function attention_bias_to_padding at 0x7fee33b3c7a0> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: 
+WARNING:tensorflow:Entity <function layers at 0x7fee949bb440> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: If not matching a CFG node, must be a block statement: <gast.gast.ImportFrom object at 0x7fee1fb65710>
+W0608 08:28:45.081164 140662724548416 ag_logging.py:146] Entity <function layers at 0x7fee949bb440> could not be transformed and will be executed as-is. Please report this to the AutoGraph team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output. Cause: If not matching a CFG node, must be a block statement: <gast.gast.ImportFrom object at 0x7fee1fb65710>
+INFO:tensorflow:Transforming body output with symbol_modality_10069_256.top
+I0608 08:28:52.371656 140662724548416 api.py:332] Transforming body output with symbol_modality_10069_256.top
+INFO:tensorflow:Base learning rate: 2.000000
+I0608 08:28:58.375051 140662724548416 learning_rate.py:29] Base learning rate: 2.000000
+INFO:tensorflow:Trainable Variables Total size: 6267136
+I0608 08:28:58.383624 140662724548416 optimize.py:355] Trainable Variables Total size: 6267136
+INFO:tensorflow:Non-trainable variables Total size: 5
+I0608 08:28:58.383992 140662724548416 optimize.py:355] Non-trainable variables Total size: 5
+INFO:tensorflow:Using optimizer adam
+I0608 08:28:58.384185 140662724548416 optimize.py:200] Using optimizer adam
+INFO:tensorflow:Done calling model_fn.
+I0608 08:29:01.673506 140662724548416 estimator.py:1150] Done calling model_fn.
+INFO:tensorflow:Create CheckpointSaverHook.
+I0608 08:29:01.674889 140662724548416 basic_session_run_hooks.py:541] Create CheckpointSaverHook.
+INFO:tensorflow:Graph was finalized.
+I0608 08:29:03.045707 140662724548416 monitored_session.py:240] Graph was finalized.
+2020-06-08 08:29:03.046276: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-06-08 08:29:03.051556: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2200000000 Hz
+2020-06-08 08:29:03.051766: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5570f278ee70 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-06-08 08:29:03.051795: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-06-08 08:29:03.052985: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-06-08 08:29:03.102204: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.102851: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: Tesla T4 major: 7 minor: 5 memoryClockRate(GHz): 1.59
+pciBusID: 0000:00:04.0
+2020-06-08 08:29:03.103142: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-06-08 08:29:03.104892: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2020-06-08 08:29:03.106055: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2020-06-08 08:29:03.106446: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2020-06-08 08:29:03.107903: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2020-06-08 08:29:03.109592: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2020-06-08 08:29:03.169066: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-06-08 08:29:03.169218: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.169870: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.170414: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-06-08 08:29:03.170483: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2020-06-08 08:29:03.368227: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-06-08 08:29:03.368266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-06-08 08:29:03.368275: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-06-08 08:29:03.368489: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.369218: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.369817: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:983] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-08 08:29:03.370406: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14354 MB memory) -> physical GPU (device: 0, name: Tesla T4, pci bus id: 0000:00:04.0, compute capability: 7.5)
+2020-06-08 08:29:03.372278: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5570fd7c0d40 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-06-08 08:29:03.372309: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla T4, Compute Capability 7.5
+INFO:tensorflow:Restoring parameters from ./output/model.ckpt-100
+I0608 08:29:03.374245 140662724548416 saver.py:1284] Restoring parameters from ./output/model.ckpt-100
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+W0608 08:29:04.798329 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:1069: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+INFO:tensorflow:Running local_init_op.
+I0608 08:29:05.183644 140662724548416 session_manager.py:500] Running local_init_op.
+INFO:tensorflow:Done running local_init_op.
+I0608 08:29:05.322938 140662724548416 session_manager.py:502] Done running local_init_op.
+INFO:tensorflow:Saving checkpoints for 100 into ./output/model.ckpt.
+I0608 08:29:08.704218 140662724548416 basic_session_run_hooks.py:606] Saving checkpoints for 100 into ./output/model.ckpt.
+2020-06-08 08:29:13.295862: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+INFO:tensorflow:loss = 7.7816734, step = 100
+I0608 08:29:16.249445 140662724548416 basic_session_run_hooks.py:262] loss = 7.7816734, step = 100
+INFO:tensorflow:global_step/sec: 18.062
+I0608 08:29:21.785145 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 18.062
+INFO:tensorflow:loss = 7.371512, step = 200 (5.537 sec)
+I0608 08:29:21.786289 140662724548416 basic_session_run_hooks.py:260] loss = 7.371512, step = 200 (5.537 sec)
+INFO:tensorflow:global_step/sec: 41.5375
+I0608 08:29:24.192574 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.5375
+INFO:tensorflow:loss = 6.6116757, step = 300 (2.407 sec)
+I0608 08:29:24.193672 140662724548416 basic_session_run_hooks.py:260] loss = 6.6116757, step = 300 (2.407 sec)
+INFO:tensorflow:global_step/sec: 38.2353
+I0608 08:29:26.807988 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.2353
+INFO:tensorflow:loss = 6.103584, step = 400 (2.616 sec)
+I0608 08:29:26.809247 140662724548416 basic_session_run_hooks.py:260] loss = 6.103584, step = 400 (2.616 sec)
+INFO:tensorflow:global_step/sec: 38.3119
+I0608 08:29:29.418127 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.3119
+INFO:tensorflow:loss = 5.9889665, step = 500 (2.610 sec)
+I0608 08:29:29.419314 140662724548416 basic_session_run_hooks.py:260] loss = 5.9889665, step = 500 (2.610 sec)
+INFO:tensorflow:global_step/sec: 42.1251
+I0608 08:29:31.792004 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.1251
+INFO:tensorflow:loss = 5.5910277, step = 600 (2.374 sec)
+I0608 08:29:31.793202 140662724548416 basic_session_run_hooks.py:260] loss = 5.5910277, step = 600 (2.374 sec)
+INFO:tensorflow:global_step/sec: 42.4103
+I0608 08:29:34.149941 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.4103
+INFO:tensorflow:loss = 6.091848, step = 700 (2.358 sec)
+I0608 08:29:34.151216 140662724548416 basic_session_run_hooks.py:260] loss = 6.091848, step = 700 (2.358 sec)
+INFO:tensorflow:global_step/sec: 42.3742
+I0608 08:29:36.509842 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.3742
+INFO:tensorflow:loss = 5.662729, step = 800 (2.360 sec)
+I0608 08:29:36.510905 140662724548416 basic_session_run_hooks.py:260] loss = 5.662729, step = 800 (2.360 sec)
+INFO:tensorflow:global_step/sec: 42.7449
+I0608 08:29:38.849294 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7449
+INFO:tensorflow:loss = 5.8053603, step = 900 (2.340 sec)
+I0608 08:29:38.850410 140662724548416 basic_session_run_hooks.py:260] loss = 5.8053603, step = 900 (2.340 sec)
+INFO:tensorflow:global_step/sec: 36.3152
+I0608 08:29:41.602949 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.3152
+INFO:tensorflow:loss = 5.578352, step = 1000 (2.754 sec)
+I0608 08:29:41.604128 140662724548416 basic_session_run_hooks.py:260] loss = 5.578352, step = 1000 (2.754 sec)
+INFO:tensorflow:global_step/sec: 41.6642
+I0608 08:29:44.003116 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.6642
+INFO:tensorflow:loss = 5.844801, step = 1100 (2.400 sec)
+I0608 08:29:44.004354 140662724548416 basic_session_run_hooks.py:260] loss = 5.844801, step = 1100 (2.400 sec)
+INFO:tensorflow:global_step/sec: 41.8112
+I0608 08:29:46.394859 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.8112
+INFO:tensorflow:loss = 5.9215097, step = 1200 (2.392 sec)
+I0608 08:29:46.395986 140662724548416 basic_session_run_hooks.py:260] loss = 5.9215097, step = 1200 (2.392 sec)
+INFO:tensorflow:global_step/sec: 42.7988
+I0608 08:29:48.731318 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7988
+INFO:tensorflow:loss = 5.3933997, step = 1300 (2.337 sec)
+I0608 08:29:48.732498 140662724548416 basic_session_run_hooks.py:260] loss = 5.3933997, step = 1300 (2.337 sec)
+INFO:tensorflow:global_step/sec: 42.7957
+I0608 08:29:51.068005 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7957
+INFO:tensorflow:loss = 5.5432053, step = 1400 (2.337 sec)
+I0608 08:29:51.069155 140662724548416 basic_session_run_hooks.py:260] loss = 5.5432053, step = 1400 (2.337 sec)
+INFO:tensorflow:global_step/sec: 43.0171
+I0608 08:29:53.392663 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.0171
+INFO:tensorflow:loss = 5.8023863, step = 1500 (2.325 sec)
+I0608 08:29:53.394073 140662724548416 basic_session_run_hooks.py:260] loss = 5.8023863, step = 1500 (2.325 sec)
+INFO:tensorflow:global_step/sec: 43.1727
+I0608 08:29:55.708926 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1727
+INFO:tensorflow:loss = 5.345414, step = 1600 (2.316 sec)
+I0608 08:29:55.710064 140662724548416 basic_session_run_hooks.py:260] loss = 5.345414, step = 1600 (2.316 sec)
+INFO:tensorflow:global_step/sec: 36.9143
+I0608 08:29:58.417916 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.9143
+INFO:tensorflow:loss = 5.500727, step = 1700 (2.709 sec)
+I0608 08:29:58.418982 140662724548416 basic_session_run_hooks.py:260] loss = 5.500727, step = 1700 (2.709 sec)
+INFO:tensorflow:global_step/sec: 43.1261
+I0608 08:30:00.736697 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1261
+INFO:tensorflow:loss = 5.5445824, step = 1800 (2.319 sec)
+I0608 08:30:00.737803 140662724548416 basic_session_run_hooks.py:260] loss = 5.5445824, step = 1800 (2.319 sec)
+INFO:tensorflow:global_step/sec: 43.4221
+I0608 08:30:03.039670 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.4221
+INFO:tensorflow:loss = 5.4154263, step = 1900 (2.303 sec)
+I0608 08:30:03.040838 140662724548416 basic_session_run_hooks.py:260] loss = 5.4154263, step = 1900 (2.303 sec)
+INFO:tensorflow:global_step/sec: 41.7387
+I0608 08:30:05.435550 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.7387
+INFO:tensorflow:loss = 5.584337, step = 2000 (2.396 sec)
+I0608 08:30:05.436769 140662724548416 basic_session_run_hooks.py:260] loss = 5.584337, step = 2000 (2.396 sec)
+INFO:tensorflow:global_step/sec: 42.9529
+I0608 08:30:07.763676 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.9529
+INFO:tensorflow:loss = 5.5961213, step = 2100 (2.328 sec)
+I0608 08:30:07.764807 140662724548416 basic_session_run_hooks.py:260] loss = 5.5961213, step = 2100 (2.328 sec)
+INFO:tensorflow:global_step/sec: 42.717
+I0608 08:30:10.104661 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.717
+INFO:tensorflow:loss = 5.678719, step = 2200 (2.341 sec)
+I0608 08:30:10.105837 140662724548416 basic_session_run_hooks.py:260] loss = 5.678719, step = 2200 (2.341 sec)
+INFO:tensorflow:global_step/sec: 42.6487
+I0608 08:30:12.449406 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.6487
+INFO:tensorflow:loss = 5.5483823, step = 2300 (2.345 sec)
+I0608 08:30:12.450749 140662724548416 basic_session_run_hooks.py:260] loss = 5.5483823, step = 2300 (2.345 sec)
+INFO:tensorflow:global_step/sec: 40.0544
+I0608 08:30:14.946004 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.0544
+INFO:tensorflow:loss = 5.6993647, step = 2400 (2.496 sec)
+I0608 08:30:14.947242 140662724548416 basic_session_run_hooks.py:260] loss = 5.6993647, step = 2400 (2.496 sec)
+INFO:tensorflow:global_step/sec: 43.5784
+I0608 08:30:17.240721 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.5784
+INFO:tensorflow:loss = 5.327941, step = 2500 (2.295 sec)
+I0608 08:30:17.241980 140662724548416 basic_session_run_hooks.py:260] loss = 5.327941, step = 2500 (2.295 sec)
+INFO:tensorflow:global_step/sec: 36.3869
+I0608 08:30:19.988974 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.3869
+INFO:tensorflow:loss = 5.384745, step = 2600 (2.748 sec)
+I0608 08:30:19.990131 140662724548416 basic_session_run_hooks.py:260] loss = 5.384745, step = 2600 (2.748 sec)
+INFO:tensorflow:global_step/sec: 42.0223
+I0608 08:30:22.368664 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.0223
+INFO:tensorflow:loss = 5.417038, step = 2700 (2.380 sec)
+I0608 08:30:22.370047 140662724548416 basic_session_run_hooks.py:260] loss = 5.417038, step = 2700 (2.380 sec)
+INFO:tensorflow:global_step/sec: 40.5166
+I0608 08:30:24.836796 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.5166
+INFO:tensorflow:loss = 5.4570284, step = 2800 (2.468 sec)
+I0608 08:30:24.838053 140662724548416 basic_session_run_hooks.py:260] loss = 5.4570284, step = 2800 (2.468 sec)
+INFO:tensorflow:global_step/sec: 42.1851
+I0608 08:30:27.207293 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.1851
+INFO:tensorflow:loss = 5.2041483, step = 2900 (2.370 sec)
+I0608 08:30:27.208515 140662724548416 basic_session_run_hooks.py:260] loss = 5.2041483, step = 2900 (2.370 sec)
+INFO:tensorflow:global_step/sec: 36.2866
+I0608 08:30:29.963155 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.2866
+INFO:tensorflow:loss = 5.768818, step = 3000 (2.756 sec)
+I0608 08:30:29.964439 140662724548416 basic_session_run_hooks.py:260] loss = 5.768818, step = 3000 (2.756 sec)
+INFO:tensorflow:global_step/sec: 42.7138
+I0608 08:30:32.304286 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7138
+INFO:tensorflow:loss = 5.546672, step = 3100 (2.341 sec)
+I0608 08:30:32.305520 140662724548416 basic_session_run_hooks.py:260] loss = 5.546672, step = 3100 (2.341 sec)
+INFO:tensorflow:global_step/sec: 40.1317
+I0608 08:30:34.796092 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.1317
+INFO:tensorflow:loss = 5.5748286, step = 3200 (2.492 sec)
+I0608 08:30:34.797317 140662724548416 basic_session_run_hooks.py:260] loss = 5.5748286, step = 3200 (2.492 sec)
+INFO:tensorflow:global_step/sec: 39.4349
+I0608 08:30:37.331933 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.4349
+INFO:tensorflow:loss = 5.202158, step = 3300 (2.536 sec)
+I0608 08:30:37.333166 140662724548416 basic_session_run_hooks.py:260] loss = 5.202158, step = 3300 (2.536 sec)
+INFO:tensorflow:global_step/sec: 40.645
+I0608 08:30:39.792258 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.645
+INFO:tensorflow:loss = 5.205422, step = 3400 (2.460 sec)
+I0608 08:30:39.793429 140662724548416 basic_session_run_hooks.py:260] loss = 5.205422, step = 3400 (2.460 sec)
+INFO:tensorflow:global_step/sec: 38.6981
+I0608 08:30:42.376366 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.6981
+INFO:tensorflow:loss = 5.118907, step = 3500 (2.584 sec)
+I0608 08:30:42.377550 140662724548416 basic_session_run_hooks.py:260] loss = 5.118907, step = 3500 (2.584 sec)
+INFO:tensorflow:global_step/sec: 39.1246
+I0608 08:30:44.932274 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.1246
+INFO:tensorflow:loss = 5.534305, step = 3600 (2.556 sec)
+I0608 08:30:44.933405 140662724548416 basic_session_run_hooks.py:260] loss = 5.534305, step = 3600 (2.556 sec)
+INFO:tensorflow:global_step/sec: 42.4284
+I0608 08:30:47.289206 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.4284
+INFO:tensorflow:loss = 5.43942, step = 3700 (2.357 sec)
+I0608 08:30:47.290278 140662724548416 basic_session_run_hooks.py:260] loss = 5.43942, step = 3700 (2.357 sec)
+INFO:tensorflow:global_step/sec: 41.0857
+I0608 08:30:49.723133 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.0857
+INFO:tensorflow:loss = 4.9106755, step = 3800 (2.434 sec)
+I0608 08:30:49.724336 140662724548416 basic_session_run_hooks.py:260] loss = 4.9106755, step = 3800 (2.434 sec)
+INFO:tensorflow:global_step/sec: 43.1451
+I0608 08:30:52.040888 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1451
+INFO:tensorflow:loss = 5.1166806, step = 3900 (2.318 sec)
+I0608 08:30:52.042056 140662724548416 basic_session_run_hooks.py:260] loss = 5.1166806, step = 3900 (2.318 sec)
+INFO:tensorflow:global_step/sec: 39.9625
+I0608 08:30:54.543242 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.9625
+INFO:tensorflow:loss = 5.0545115, step = 4000 (2.502 sec)
+I0608 08:30:54.544340 140662724548416 basic_session_run_hooks.py:260] loss = 5.0545115, step = 4000 (2.502 sec)
+INFO:tensorflow:global_step/sec: 42.7845
+I0608 08:30:56.880539 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7845
+INFO:tensorflow:loss = 5.128853, step = 4100 (2.337 sec)
+I0608 08:30:56.881790 140662724548416 basic_session_run_hooks.py:260] loss = 5.128853, step = 4100 (2.337 sec)
+INFO:tensorflow:global_step/sec: 42.6324
+I0608 08:30:59.226161 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.6324
+INFO:tensorflow:loss = 5.3183413, step = 4200 (2.345 sec)
+I0608 08:30:59.227263 140662724548416 basic_session_run_hooks.py:260] loss = 5.3183413, step = 4200 (2.345 sec)
+INFO:tensorflow:global_step/sec: 43.1083
+I0608 08:31:01.545893 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1083
+INFO:tensorflow:loss = 5.211887, step = 4300 (2.320 sec)
+I0608 08:31:01.547008 140662724548416 basic_session_run_hooks.py:260] loss = 5.211887, step = 4300 (2.320 sec)
+INFO:tensorflow:global_step/sec: 41.8943
+I0608 08:31:03.932904 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.8943
+INFO:tensorflow:loss = 5.092449, step = 4400 (2.387 sec)
+I0608 08:31:03.934323 140662724548416 basic_session_run_hooks.py:260] loss = 5.092449, step = 4400 (2.387 sec)
+INFO:tensorflow:global_step/sec: 39.1644
+I0608 08:31:06.486204 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.1644
+INFO:tensorflow:loss = 5.0347342, step = 4500 (2.553 sec)
+I0608 08:31:06.487393 140662724548416 basic_session_run_hooks.py:260] loss = 5.0347342, step = 4500 (2.553 sec)
+INFO:tensorflow:global_step/sec: 42.2507
+I0608 08:31:08.853009 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.2507
+INFO:tensorflow:loss = 4.929471, step = 4600 (2.367 sec)
+I0608 08:31:08.854138 140662724548416 basic_session_run_hooks.py:260] loss = 4.929471, step = 4600 (2.367 sec)
+INFO:tensorflow:global_step/sec: 39.8663
+I0608 08:31:11.361413 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.8663
+INFO:tensorflow:loss = 4.8642983, step = 4700 (2.508 sec)
+I0608 08:31:11.362489 140662724548416 basic_session_run_hooks.py:260] loss = 4.8642983, step = 4700 (2.508 sec)
+INFO:tensorflow:global_step/sec: 43.1431
+I0608 08:31:13.679286 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1431
+INFO:tensorflow:loss = 4.964303, step = 4800 (2.318 sec)
+I0608 08:31:13.680397 140662724548416 basic_session_run_hooks.py:260] loss = 4.964303, step = 4800 (2.318 sec)
+INFO:tensorflow:global_step/sec: 43.3443
+I0608 08:31:15.986408 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.3443
+INFO:tensorflow:loss = 5.220435, step = 4900 (2.307 sec)
+I0608 08:31:15.987562 140662724548416 basic_session_run_hooks.py:260] loss = 5.220435, step = 4900 (2.307 sec)
+INFO:tensorflow:global_step/sec: 39.6131
+I0608 08:31:18.510837 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.6131
+INFO:tensorflow:loss = 4.873255, step = 5000 (2.525 sec)
+I0608 08:31:18.512068 140662724548416 basic_session_run_hooks.py:260] loss = 4.873255, step = 5000 (2.525 sec)
+INFO:tensorflow:global_step/sec: 43.3881
+I0608 08:31:20.815575 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.3881
+INFO:tensorflow:loss = 5.243314, step = 5100 (2.305 sec)
+I0608 08:31:20.816823 140662724548416 basic_session_run_hooks.py:260] loss = 5.243314, step = 5100 (2.305 sec)
+INFO:tensorflow:global_step/sec: 39.0893
+I0608 08:31:23.373827 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.0893
+INFO:tensorflow:loss = 5.011808, step = 5200 (2.558 sec)
+I0608 08:31:23.374921 140662724548416 basic_session_run_hooks.py:260] loss = 5.011808, step = 5200 (2.558 sec)
+INFO:tensorflow:global_step/sec: 41.8238
+I0608 08:31:25.764816 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.8238
+INFO:tensorflow:loss = 4.901054, step = 5300 (2.391 sec)
+I0608 08:31:25.765918 140662724548416 basic_session_run_hooks.py:260] loss = 4.901054, step = 5300 (2.391 sec)
+INFO:tensorflow:global_step/sec: 43.0892
+I0608 08:31:28.085582 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.0892
+INFO:tensorflow:loss = 4.961924, step = 5400 (2.321 sec)
+I0608 08:31:28.086678 140662724548416 basic_session_run_hooks.py:260] loss = 4.961924, step = 5400 (2.321 sec)
+INFO:tensorflow:global_step/sec: 36.7455
+I0608 08:31:30.807057 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.7455
+INFO:tensorflow:loss = 4.701316, step = 5500 (2.722 sec)
+I0608 08:31:30.808361 140662724548416 basic_session_run_hooks.py:260] loss = 4.701316, step = 5500 (2.722 sec)
+INFO:tensorflow:global_step/sec: 43.4548
+I0608 08:31:33.108247 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.4548
+INFO:tensorflow:loss = 4.9625306, step = 5600 (2.301 sec)
+I0608 08:31:33.109323 140662724548416 basic_session_run_hooks.py:260] loss = 4.9625306, step = 5600 (2.301 sec)
+INFO:tensorflow:global_step/sec: 39.8419
+I0608 08:31:35.618147 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.8419
+INFO:tensorflow:loss = 4.733452, step = 5700 (2.510 sec)
+I0608 08:31:35.619398 140662724548416 basic_session_run_hooks.py:260] loss = 4.733452, step = 5700 (2.510 sec)
+INFO:tensorflow:global_step/sec: 43.1361
+I0608 08:31:37.936416 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.1361
+INFO:tensorflow:loss = 4.854377, step = 5800 (2.318 sec)
+I0608 08:31:37.937610 140662724548416 basic_session_run_hooks.py:260] loss = 4.854377, step = 5800 (2.318 sec)
+INFO:tensorflow:global_step/sec: 41.7254
+I0608 08:31:40.333025 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.7254
+INFO:tensorflow:loss = 4.7861204, step = 5900 (2.397 sec)
+I0608 08:31:40.334249 140662724548416 basic_session_run_hooks.py:260] loss = 4.7861204, step = 5900 (2.397 sec)
+INFO:tensorflow:global_step/sec: 39.1068
+I0608 08:31:42.890134 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.1068
+INFO:tensorflow:loss = 5.392666, step = 6000 (2.557 sec)
+I0608 08:31:42.891489 140662724548416 basic_session_run_hooks.py:260] loss = 5.392666, step = 6000 (2.557 sec)
+INFO:tensorflow:global_step/sec: 39.321
+I0608 08:31:45.433331 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.321
+INFO:tensorflow:loss = 4.7334595, step = 6100 (2.543 sec)
+I0608 08:31:45.434653 140662724548416 basic_session_run_hooks.py:260] loss = 4.7334595, step = 6100 (2.543 sec)
+INFO:tensorflow:global_step/sec: 39.9877
+I0608 08:31:47.934069 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.9877
+INFO:tensorflow:loss = 4.9601097, step = 6200 (2.501 sec)
+I0608 08:31:47.935291 140662724548416 basic_session_run_hooks.py:260] loss = 4.9601097, step = 6200 (2.501 sec)
+INFO:tensorflow:global_step/sec: 42.4502
+I0608 08:31:50.289776 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.4502
+INFO:tensorflow:loss = 5.2209973, step = 6300 (2.356 sec)
+I0608 08:31:50.291011 140662724548416 basic_session_run_hooks.py:260] loss = 5.2209973, step = 6300 (2.356 sec)
+INFO:tensorflow:global_step/sec: 43.2561
+I0608 08:31:52.601588 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.2561
+INFO:tensorflow:loss = 5.536143, step = 6400 (2.312 sec)
+I0608 08:31:52.602709 140662724548416 basic_session_run_hooks.py:260] loss = 5.536143, step = 6400 (2.312 sec)
+INFO:tensorflow:global_step/sec: 39.1465
+I0608 08:31:55.156090 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.1465
+INFO:tensorflow:loss = 5.2485185, step = 6500 (2.555 sec)
+I0608 08:31:55.157235 140662724548416 basic_session_run_hooks.py:260] loss = 5.2485185, step = 6500 (2.555 sec)
+INFO:tensorflow:global_step/sec: 42.7999
+I0608 08:31:57.492537 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.7999
+INFO:tensorflow:loss = 4.9202476, step = 6600 (2.336 sec)
+I0608 08:31:57.493579 140662724548416 basic_session_run_hooks.py:260] loss = 4.9202476, step = 6600 (2.336 sec)
+INFO:tensorflow:global_step/sec: 43.5301
+I0608 08:31:59.789785 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.5301
+INFO:tensorflow:loss = 5.0323763, step = 6700 (2.297 sec)
+I0608 08:31:59.790948 140662724548416 basic_session_run_hooks.py:260] loss = 5.0323763, step = 6700 (2.297 sec)
+INFO:tensorflow:global_step/sec: 38.5125
+I0608 08:32:02.386360 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.5125
+INFO:tensorflow:loss = 4.822287, step = 6800 (2.597 sec)
+I0608 08:32:02.387542 140662724548416 basic_session_run_hooks.py:260] loss = 4.822287, step = 6800 (2.597 sec)
+INFO:tensorflow:global_step/sec: 39.1281
+I0608 08:32:04.942062 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.1281
+INFO:tensorflow:loss = 5.1266313, step = 6900 (2.556 sec)
+I0608 08:32:04.943243 140662724548416 basic_session_run_hooks.py:260] loss = 5.1266313, step = 6900 (2.556 sec)
+INFO:tensorflow:global_step/sec: 42.6392
+I0608 08:32:07.287364 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.6392
+INFO:tensorflow:loss = 4.681363, step = 7000 (2.345 sec)
+I0608 08:32:07.288695 140662724548416 basic_session_run_hooks.py:260] loss = 4.681363, step = 7000 (2.345 sec)
+INFO:tensorflow:global_step/sec: 42.8142
+I0608 08:32:09.622998 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.8142
+INFO:tensorflow:loss = 5.116683, step = 7100 (2.335 sec)
+I0608 08:32:09.624133 140662724548416 basic_session_run_hooks.py:260] loss = 5.116683, step = 7100 (2.335 sec)
+INFO:tensorflow:global_step/sec: 38.7761
+I0608 08:32:12.201920 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.7761
+INFO:tensorflow:loss = 4.4391026, step = 7200 (2.579 sec)
+I0608 08:32:12.203121 140662724548416 basic_session_run_hooks.py:260] loss = 4.4391026, step = 7200 (2.579 sec)
+INFO:tensorflow:global_step/sec: 35.8221
+I0608 08:32:14.993506 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 35.8221
+INFO:tensorflow:loss = 4.681334, step = 7300 (2.792 sec)
+I0608 08:32:14.994674 140662724548416 basic_session_run_hooks.py:260] loss = 4.681334, step = 7300 (2.792 sec)
+INFO:tensorflow:global_step/sec: 42.5196
+I0608 08:32:17.345347 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.5196
+INFO:tensorflow:loss = 4.721505, step = 7400 (2.352 sec)
+I0608 08:32:17.346507 140662724548416 basic_session_run_hooks.py:260] loss = 4.721505, step = 7400 (2.352 sec)
+INFO:tensorflow:global_step/sec: 43.0578
+I0608 08:32:19.667821 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.0578
+INFO:tensorflow:loss = 5.2090387, step = 7500 (2.323 sec)
+I0608 08:32:19.669027 140662724548416 basic_session_run_hooks.py:260] loss = 5.2090387, step = 7500 (2.323 sec)
+INFO:tensorflow:global_step/sec: 38.6669
+I0608 08:32:22.254014 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.6669
+INFO:tensorflow:loss = 4.4706416, step = 7600 (2.586 sec)
+I0608 08:32:22.255310 140662724548416 basic_session_run_hooks.py:260] loss = 4.4706416, step = 7600 (2.586 sec)
+INFO:tensorflow:global_step/sec: 41.9033
+I0608 08:32:24.640439 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.9033
+INFO:tensorflow:loss = 4.5570045, step = 7700 (2.386 sec)
+I0608 08:32:24.641615 140662724548416 basic_session_run_hooks.py:260] loss = 4.5570045, step = 7700 (2.386 sec)
+INFO:tensorflow:global_step/sec: 42.9836
+I0608 08:32:26.966918 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.9836
+INFO:tensorflow:loss = 4.745322, step = 7800 (2.326 sec)
+I0608 08:32:26.968072 140662724548416 basic_session_run_hooks.py:260] loss = 4.745322, step = 7800 (2.326 sec)
+INFO:tensorflow:global_step/sec: 42.5256
+I0608 08:32:29.318461 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.5256
+INFO:tensorflow:loss = 4.705182, step = 7900 (2.352 sec)
+I0608 08:32:29.319581 140662724548416 basic_session_run_hooks.py:260] loss = 4.705182, step = 7900 (2.352 sec)
+INFO:tensorflow:global_step/sec: 36.5983
+I0608 08:32:32.050815 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.5983
+INFO:tensorflow:loss = 4.8236775, step = 8000 (2.732 sec)
+I0608 08:32:32.051987 140662724548416 basic_session_run_hooks.py:260] loss = 4.8236775, step = 8000 (2.732 sec)
+INFO:tensorflow:global_step/sec: 43.0382
+I0608 08:32:34.374341 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 43.0382
+INFO:tensorflow:loss = 4.8031583, step = 8100 (2.324 sec)
+I0608 08:32:34.375487 140662724548416 basic_session_run_hooks.py:260] loss = 4.8031583, step = 8100 (2.324 sec)
+INFO:tensorflow:global_step/sec: 42.6959
+I0608 08:32:36.716474 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.6959
+INFO:tensorflow:loss = 4.842778, step = 8200 (2.342 sec)
+I0608 08:32:36.717656 140662724548416 basic_session_run_hooks.py:260] loss = 4.842778, step = 8200 (2.342 sec)
+INFO:tensorflow:global_step/sec: 42.8324
+I0608 08:32:39.051165 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.8324
+INFO:tensorflow:loss = 4.3929553, step = 8300 (2.335 sec)
+I0608 08:32:39.052402 140662724548416 basic_session_run_hooks.py:260] loss = 4.3929553, step = 8300 (2.335 sec)
+INFO:tensorflow:global_step/sec: 42.8572
+I0608 08:32:41.384470 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.8572
+INFO:tensorflow:loss = 4.9435606, step = 8400 (2.333 sec)
+I0608 08:32:41.385599 140662724548416 basic_session_run_hooks.py:260] loss = 4.9435606, step = 8400 (2.333 sec)
+INFO:tensorflow:global_step/sec: 41.0144
+I0608 08:32:43.822664 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.0144
+INFO:tensorflow:loss = 4.669178, step = 8500 (2.438 sec)
+I0608 08:32:43.823867 140662724548416 basic_session_run_hooks.py:260] loss = 4.669178, step = 8500 (2.438 sec)
+INFO:tensorflow:global_step/sec: 36.4845
+I0608 08:32:46.563546 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.4845
+INFO:tensorflow:loss = 5.032172, step = 8600 (2.741 sec)
+I0608 08:32:46.564716 140662724548416 basic_session_run_hooks.py:260] loss = 5.032172, step = 8600 (2.741 sec)
+INFO:tensorflow:global_step/sec: 37.1236
+I0608 08:32:49.257261 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 37.1236
+INFO:tensorflow:loss = 4.2351365, step = 8700 (2.694 sec)
+I0608 08:32:49.258320 140662724548416 basic_session_run_hooks.py:260] loss = 4.2351365, step = 8700 (2.694 sec)
+INFO:tensorflow:global_step/sec: 41.7015
+I0608 08:32:51.655237 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.7015
+INFO:tensorflow:loss = 4.7622585, step = 8800 (2.398 sec)
+I0608 08:32:51.656519 140662724548416 basic_session_run_hooks.py:260] loss = 4.7622585, step = 8800 (2.398 sec)
+INFO:tensorflow:global_step/sec: 42.2677
+I0608 08:32:54.021116 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.2677
+INFO:tensorflow:loss = 4.9854765, step = 8900 (2.366 sec)
+I0608 08:32:54.022444 140662724548416 basic_session_run_hooks.py:260] loss = 4.9854765, step = 8900 (2.366 sec)
+INFO:tensorflow:global_step/sec: 40.8784
+I0608 08:32:56.467397 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.8784
+INFO:tensorflow:loss = 4.8164973, step = 9000 (2.446 sec)
+I0608 08:32:56.468538 140662724548416 basic_session_run_hooks.py:260] loss = 4.8164973, step = 9000 (2.446 sec)
+INFO:tensorflow:global_step/sec: 38.791
+I0608 08:32:59.045313 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.791
+INFO:tensorflow:loss = 4.805535, step = 9100 (2.578 sec)
+I0608 08:32:59.046521 140662724548416 basic_session_run_hooks.py:260] loss = 4.805535, step = 9100 (2.578 sec)
+INFO:tensorflow:global_step/sec: 38.0321
+I0608 08:33:01.674704 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 38.0321
+INFO:tensorflow:loss = 4.5934696, step = 9200 (2.629 sec)
+I0608 08:33:01.676005 140662724548416 basic_session_run_hooks.py:260] loss = 4.5934696, step = 9200 (2.629 sec)
+INFO:tensorflow:global_step/sec: 40.2015
+I0608 08:33:04.162142 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.2015
+INFO:tensorflow:loss = 5.3304706, step = 9300 (2.487 sec)
+I0608 08:33:04.163346 140662724548416 basic_session_run_hooks.py:260] loss = 5.3304706, step = 9300 (2.487 sec)
+INFO:tensorflow:global_step/sec: 36.2586
+I0608 08:33:06.920151 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 36.2586
+INFO:tensorflow:loss = 4.2820387, step = 9400 (2.758 sec)
+I0608 08:33:06.921441 140662724548416 basic_session_run_hooks.py:260] loss = 4.2820387, step = 9400 (2.758 sec)
+INFO:tensorflow:global_step/sec: 41.3043
+I0608 08:33:09.341174 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 41.3043
+INFO:tensorflow:loss = 4.845951, step = 9500 (2.421 sec)
+I0608 08:33:09.342437 140662724548416 basic_session_run_hooks.py:260] loss = 4.845951, step = 9500 (2.421 sec)
+INFO:tensorflow:global_step/sec: 42.3054
+I0608 08:33:11.704933 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 42.3054
+INFO:tensorflow:loss = 4.586203, step = 9600 (2.364 sec)
+I0608 08:33:11.706004 140662724548416 basic_session_run_hooks.py:260] loss = 4.586203, step = 9600 (2.364 sec)
+INFO:tensorflow:global_step/sec: 39.9135
+I0608 08:33:14.210374 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.9135
+INFO:tensorflow:loss = 4.98822, step = 9700 (2.506 sec)
+I0608 08:33:14.211777 140662724548416 basic_session_run_hooks.py:260] loss = 4.98822, step = 9700 (2.506 sec)
+INFO:tensorflow:global_step/sec: 39.6323
+I0608 08:33:16.733566 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 39.6323
+INFO:tensorflow:loss = 4.23082, step = 9800 (2.523 sec)
+I0608 08:33:16.735079 140662724548416 basic_session_run_hooks.py:260] loss = 4.23082, step = 9800 (2.523 sec)
+INFO:tensorflow:global_step/sec: 40.6737
+I0608 08:33:19.192143 140662724548416 basic_session_run_hooks.py:692] global_step/sec: 40.6737
+INFO:tensorflow:loss = 4.8111672, step = 9900 (2.458 sec)
+I0608 08:33:19.193276 140662724548416 basic_session_run_hooks.py:260] loss = 4.8111672, step = 9900 (2.458 sec)
+INFO:tensorflow:Saving checkpoints for 10000 into ./output/model.ckpt.
+I0608 08:33:21.636284 140662724548416 basic_session_run_hooks.py:606] Saving checkpoints for 10000 into ./output/model.ckpt.
+WARNING:tensorflow:From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+W0608 08:33:21.728592 140662724548416 deprecation.py:323] From /home/zhangxiaotiannew/anaconda3/envs/NLP/lib/python3.7/site-packages/tensorflow_core/python/training/saver.py:963: remove_checkpoint (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to delete files with this prefix.
+INFO:tensorflow:Loss for final step: 4.721457.
+I0608 08:33:22.351781 140662724548416 estimator.py:371] Loss for final step: 4.721457.
