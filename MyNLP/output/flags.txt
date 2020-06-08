@@ -90,7 +90,7 @@
 --save_checkpoints_secs=1800
 --nosync
 --notfdbg
---train_steps=10000
+--train_steps=100000
 --worker_gpu=1
 --worker_gpu_memory_fraction=0.95
 --worker_id=0

@@ -8,7 +8,7 @@
 --hparams=batch_size=128
 --problem=translate_up2down
 --data_dir=./data_dir
---train_steps=10000
+--train_steps=100000
 --eval_early_stopping_metric=loss
 --eval_early_stopping_metric_delta=0.1
 --eval_early_stopping_steps=None

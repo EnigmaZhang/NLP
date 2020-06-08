@@ -146,7 +146,7 @@
 "symbol_modality_num_shards": 16,
 "top": {},
 "tpu_enable_host_call": false,
-"train_steps": 10000,
+"train_steps": 100000,
 "unidirectional_encoder": false,
 "use_custom_ops": true,
 "use_fixed_batch_size": false,

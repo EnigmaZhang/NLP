@@ -16,7 +16,7 @@ t2t-trainer \
 --output_dir=${TRAIN_DIR} \
 --keep_checkpoint_max=2 \
 --worker_gpu=1 \
---train_steps=10000 \
+--train_steps=100000 \
 --save_checkpoints_secs=1800 \
 --schedule=train \
 --worker_gpu_memory_fraction=0.95 \
