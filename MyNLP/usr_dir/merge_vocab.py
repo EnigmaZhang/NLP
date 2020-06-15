@@ -7,11 +7,12 @@ https://github.com/tensorflow/tensor2tensor/blob/master/tensor2tensor/test_data/
 """
 
 import os
-from abc import ABC
 
+from tensor2tensor.data_generators import generator_utils
 from tensor2tensor.data_generators import problem
 from tensor2tensor.data_generators import text_encoder
 from tensor2tensor.data_generators import text_problems
+from tensor2tensor.data_generators import translate
 from tensor2tensor.utils import registry
 import tensorflow as tf
 
@@ -42,7 +43,7 @@ EOS = text_encoder.EOS_ID
 
 
 @registry.register_problem
-class TranslateUp2down(text_problems.Text2TextProblem, ABC):
+class TranslateUp2down(text_problems.Text2TextProblem):
 
     @property
     def approx_vocab_size(self):

@@ -30,7 +30,7 @@ t2t-decoder \
   --hparams_set=$HPARAMS \
   --output_dir=$TRAIN_DIR \
   --decode_from_file=$DECODE_FILE \
-  --decode_to_file=result.txt
+  --decode_to_file=/result.txt >> /dev/null 2>&1
 
 echo $new_chars
-cat result.txt
+cat /result.txt

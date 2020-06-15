@@ -23,7 +23,7 @@
 --autotune_maximize
 --autotune_parallel_trials=1
 --nocloud_mlengine
---cloud_tpu_name=zhangxiaotiannew-tpu
+--cloud_tpu_name=enigma-tpu
 --eval_steps=100
 --export_saved_model_api_version=1
 --nogenerate_data
@@ -75,10 +75,10 @@
 --noeval_use_test_set
 --noexport_saved_model
 --gpu_order=
---hparams=batch_size=128
+--hparams=batch_size=128,
 --hparams_set=transformer_small
 --keep_checkpoint_every_n_hours=10000
---keep_checkpoint_max=2
+--keep_checkpoint_max=20
 --local_eval_frequency=1000
 --nolog_device_placement
 --model=transformer
@@ -90,7 +90,7 @@
 --save_checkpoints_secs=1800
 --nosync
 --notfdbg
---train_steps=100000
+--train_steps=100001
 --worker_gpu=1
 --worker_gpu_memory_fraction=0.95
 --worker_id=0
