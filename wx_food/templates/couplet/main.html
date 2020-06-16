@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能对联生成系统</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="login-box">
+            <div class="apple-btn login-apple">
+                <li class="red-btn"></li>
+                <li class="yellow-btn"></li>
+                <li class="green-btn"></li>
+            </div>
+            <div class="title">欢迎使用智能生成对联系统</div>
+            <form action="./index/" , method="GET">
+                <div class="input">
+                    <input type="text" id="up_couplet" placeholder="Input your words" , name="up_couplet">
+                </div>
+                <div class="btn login-btn">
+                    <input type="submit" value="匹配下联">
+                </div>
+            </form>
+            <div class="title">请耐心等待</div>
+        </div>
+    </div>
+
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="/static//js/script.js"></script>
+</body>
+
+</html>
