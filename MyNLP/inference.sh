@@ -33,4 +33,4 @@ t2t-decoder \
   --decode_to_file=/result.txt >> /dev/null 2>&1
 
 echo $new_chars
-cat /result.txt
+cat result.txt
