@@ -33,8 +33,4 @@ t2t-decoder \
   --decode_to_file=./result.txt >> /dev/null 2>&1
 
 echo $new_chars
-<<<<<<< HEAD
 cat ./result.txt
-=======
-cat result.txt
->>>>>>> 0970fd00c7bd6d300b7cc8c362f65d5b7ee2d892
