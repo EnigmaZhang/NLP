@@ -10,7 +10,7 @@ import string
 # Create your views here.
 # 渲染登录首页
 def main_view(request):
-    error_string = "欢迎使用智能生成对联系统，请输入七个及以下简体汉字"
+    error_string = "请输入七个及以下简体汉字"
     cn_punc = "！？｡＂＃＄％＆＇（）＊＋，－／：；＜＝＞＠［＼］＾＿｀｛｜｝～｟｠｢｣､、〃》「」『』【】〔〕〖〗〘〙〚〛〜〝〞〟〰〾〿–—‘’‛“”„‟…‧﹏."
     punc_pattern = re.compile("[{}{}]".format(cn_punc, string.punctuation))
     uname = request.GET.get('up_couplet','')
@@ -21,6 +21,8 @@ def main_view(request):
     elif len(uname) > 7:
         result = error_string
     elif punc_pattern.search(uname):
+        result = error_string
+    elif re.match("[^\u4e00-\u9fa5]", uname):
         result = error_string
     else:
         try:
